@@ -1,10 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500&display=swap');
+
+@font-face {
+    font-family: 'Vision Light Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Vision Light Italic'), url('fonts/Vision-LightItalic.woff') format('woff');
+    }
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 html {
     font-size: 62.5%;
+    font-family: 'Noto Serif JP', serif;
+    /* font-family: 'Vision Light Italic';
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-weight: 400;
+    font-style: normal; */
+    background-color: #EED992;
 }
 .wrapper{
     width: 100vw;
@@ -15,7 +30,7 @@ html {
     height: 100vh;
     position: fixed;
 	z-index: 999;
-    /* display: none; */
+    display: none;
     background-color: #EED992;
 }
 .loading{
@@ -26,14 +41,33 @@ html {
     top: 50%;
     left: 50%;
     transform:translate(-50%,-50%);
-    animation:katakata 0.8s infinite ease-in-out alternate;
+    animation:rattling 0.8s infinite ease-in-out alternate;
     transform-origin: center center;
     color: #4B4846;
 }
 .loading_contents img{
     width: 100px;
 }
-@keyframes katakata {
+.button{
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 50px;
+}
+.button a{
+    text-decoration: none;
+}
+.button:hover{
+    background-color: #fff;
+    transition: 2s;
+}
+.button p{
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Vision Light Italic';
+    padding: 6px 30px;
+    text-align: center;
+}
+@keyframes rattling {
     0% {transform:translate(-50%,-50%) rotate(0deg);}
     49% {transform:translate(-50%,-50%) rotate(0deg);}
     50% {transform:translate(-50%,-50%) rotate(-6deg);}

@@ -1,23 +1,227 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        (function (d) {
+            var config = {
+                    kitId: 'zro8gng',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="wrapper">
-    <div id="loading" class="loading">
-        <div class="loading_contents">
-        <img src="sozai/loading.png">
-        <p>loading</p>
+        <div id="loading" class="loading">
+            <div class="loading_contents">
+                <img src="img/loading.png">
+                <p>loading</p>
+            </div>
         </div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="">マヌカって何？</a></li>
+                    <li><a href="">マヌカハニーの3大効果</a></li>
+                    <li><a href="">マヌカってどう食べる？</a></li>
+                    <li><a href="">マヌカってどう選ぶの？</a></li>
+                </ul>
+            </nav>
+            <div class="header_title">
+                <h1>日々とマヌカ</h1>
+            </div>
+            <div class="header_description">
+                <p>日々とマヌカでは、生活に少し<br>
+                    の彩を加える、マヌカハニーと<br>
+                    いう選択肢を提案します。</p>
+            </div>
+            <div class="decoration">
+                <img src="img/white_hexagon.png">
+                <img src="img/border_hexagon.png">
+                <img src="img/fv.png">
+                <img src="img/fv.png">
+            </div>
+        </header>
+        <section id="intro">
+            <h2>マヌカって何？</h2>
+            <p>「マヌカ」とは、主にニュージーランドに<br>
+                自生している植物。マヌカハニーとは、<br>
+                そのマヌカの木に咲く花の蜜だけで作ら<br>
+                れた蜂蜜の事です。マヌカの木はさまざ<br>
+                まな薬効を持っており、ニュージーラン<br>
+                ドの先住民族は、マヌカハニーを傷や火<br>
+                傷など、様々な病気の治療に使っていま<br>
+                した。
+            </p>
+            <div class="decoration">
+                <img src="img/blue_hexagon.png">
+                <img src="img/border_hexagon.png">
+                <img src="img/offwhite_hexagon.png">
+                <img src="img/blue_hexagon.png">
+                <img src="img/white_hexagon.png">
+                <img src="img/circle.png">
+                <img src="img/honey.png">
+                <img src="img/yellow_hexagon.png">
+            </div>
+        </section>
+        <section id="effect">
+            <h2>マヌカハニーの３大効果</h2>
+            <div class="effect_main_container">
+                <div class="effect_main">
+                    <img src="img/border_gold_hexagon.png">
+                    <p>抗菌</p>
+                </div>
+                <div class="effect_main">
+                    <img src="img/border_gold_hexagon.png">
+                    <p>抗炎症</p>
+                </div>
+                <div class="effect_main">
+                    <img src="img/border_gold_hexagon.png">
+                    <p>治癒</p>
+                </div>
+            </div>
+            <div class="effect_description">
+                <p>この効果をもたらすのは、メチルグリオキサールという成分です。<br>
+                    メチルグリオキサールは熱や酵素による分解に強いため、<br>
+                    様々な料理に取り入れることができます。
+                </p>
+            </div>
+            <div class="button">
+                <a href="">
+                    <p>BUY NOW / +</p>
+                </a>
+            </div>
+            <div class="decoration">
+                <img src="img/border_hexagon.png">
+                <img src="img/offwhite_hexagon.png">
+                <img src="img/blue_hexagon.png">
+                <img src="img/circle.png">
+            </div>
+        </section>
+        <section id="recipe">
+            <h2>マヌカってどう食べる？</h2>
+            <div class="recipe_main">
+                <img src="img/food_1.png">
+                <img src="img/food_2.png">
+                <img src="img/food_3.png">
+                <img src="img/food_4.png">
+                <img src="img/food_5.png">
+            </div>
+            <div class="button">
+                <a href="">
+                    <p>BUY NOW / +</p>
+                </a>
+            </div>
+            <div class="decoration">
+                <img src="img/white_hexagon.png">
+                <img src="img/circle.png">
+            </div>
+        </section>
+        <section id="choose">
+            <h2>マヌカハニーってどう選ぶの？</h2>
+            <div class="choose_main">
+                <img src="img/bottle.png">
+                <p>UMF</p>
+                <p>5+</p>
+                <p>低活性</p>
+                <p>お試しにおすすめ。<br>
+                    味も食べやすく、<br>
+                    美味しい。</p>
+                <div class="button">
+                    <a href="">
+                        <p>BUY NOW / +</p>
+                    </a>
+                </div>
+            </div>
+            <div class="choose_main">
+                <img src="img/bottle.png">
+                <p>UMF</p>
+                <p>10+</p>
+                <p>中活性</p>
+                <p>特に体に不調はない<br>
+                    が、健康維持したい<br>
+                    方におすすめ。</p>
+                <div class="button">
+                    <a href="">
+                        <p>BUY NOW / +</p>
+                    </a>
+                </div>
+            </div>
+            <div class="choose_main">
+                <img src="img/bottle.png">
+                <p>UMF</p>
+                <p>15+</p>
+                <p>高活性</p>
+                <p>体に不調がある方や、<br>
+                    風邪をひきやすい方<br>
+                    ににおすすめ。</p>
+                <div class="button">
+                    <a href="">
+                        <p>BUY NOW / +</p>
+                    </a>
+                </div>
+            </div>
+            <div class="choose_main">
+                <img src="img/bottle.png">
+                <p>UMF</p>
+                <p>18+</p>
+                <p>超高活性</p>
+                <p>圧倒的不調の方に、<br>
+                    おすすめ。味はく<br>
+                    せがかなり強い。</p>
+                <div class="button">
+                    <a href="">
+                        <p>BUY NOW / +</p>
+                    </a>
+                </div>
+            </div>
+            <div class="decoration">
+                <img src="img/border_hexagon.png">
+                <img src="img/blue_hexagon.png">
+                <img src="img/circle.png">
+            </div>
+        </section>
+        <div class="button">
+            <a href="">
+                <p>BUY NOW / +</p>
+            </a>
+        </div>
+        <footer>
+            <p>©︎jumpei suko all rights reserved</p>
+            <img src="img/footer.png">
+        </footer>
     </div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.
 cookie.js"></script>
     <script src="script.js"></script>
 </body>
