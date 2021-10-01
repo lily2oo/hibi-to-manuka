@@ -25,6 +25,9 @@ html {
     width: 100vw;
     overflow: hidden;
 }
+.sp{
+    display: none;
+}
 
 #loading {
     width: 100%;
@@ -90,14 +93,17 @@ header nav li {
     opacity: 0.8;
 }
 
-header nav a {
+header nav li a {
     font-size: 2.7rem;
     letter-spacing: 0.3rem;
     padding: 14px 2px;
     color: rgb(75, 72, 70, 0.8);
     background-color: #F8F8EF;
 }
-
+header nav li a span {
+    text-combine-upright: all;
+    margin-bottom: 3px;
+  }
 h1 {
     position: absolute;
     top: 48%;
@@ -202,6 +208,7 @@ header .decoration::after {
     font-family: 'Vision Light Italic';
     padding: 17px 30px 15px;
     text-align: center;
+    white-space: nowrap;
 }
 .button .bg{
     position: absolute;
@@ -222,16 +229,16 @@ header .decoration::after {
     text-align: center;
     white-space: nowrap;
 }
-
 #intro {
     position: relative;
-    height: 1500px
+    height: 1500px;
+    margin-top: 100px;
 }
 
 #intro h2 {
     position: absolute;
     top: 10%;
-    right: 25%;
+    right: 35%;
     z-index: 100;
     writing-mode: vertical-rl;
     font-size: 6rem;
@@ -241,10 +248,11 @@ header .decoration::after {
     color: rgb(75, 72, 70, 0.8);
 }
 
+
 #intro p {
     position: absolute;
     top: 20%;
-    right: 40%;
+    right: 50%;
     z-index: 10;
     writing-mode: vertical-rl;
     opacity: 0.7;
@@ -256,7 +264,7 @@ header .decoration::after {
 
 #intro .decoration img:nth-child(1) {
     width: 20%;
-    top: 5%;
+    top: 0%;
     left: 2%;
     z-index: 2;
 }
@@ -312,8 +320,8 @@ header .decoration::after {
 
 #effect {
     position: relative;
-    height: 1200px;
     text-align: center;
+    padding-bottom: 200px;
 }
 
 h2 {
@@ -331,7 +339,7 @@ h2 {
 }
 
 .effect_main_container {
-    width: 1000px;
+    width: 80%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -365,6 +373,8 @@ h2 {
 
 #effect .effect_description {
     text-align: center;
+    position: relative;
+    z-index: 99;
     color: #4B4846;
     font-size: 2rem;
     letter-spacing: 0.2rem;
@@ -375,6 +385,7 @@ h2 {
 
 #effect .button {
     position: relative;
+    left: 30%;
     z-index: 100;
 }
 
@@ -395,20 +406,22 @@ h2 {
 
 #effect .decoration img:nth-child(2) {
     width: 18%;
-    bottom: 28%;
+    bottom: 20%;
     left: 0%;
-
+    z-index: 0;
 }
 
 #effect .decoration img:nth-child(3) {
     width: 20%;
-    bottom: 20%;
+    bottom: 10%;
     left: 5%;
+    z-index: 0;
 }
 #effect .decoration img:nth-child(4) {
     width: 6%;
-    bottom: 15%;
+    bottom: 5%;
     left: 25%;
+    z-index: 0;
 }
 #effect .decoration::before {
     content: "";
@@ -432,11 +445,18 @@ h2 {
 }
 
 .recipe_main_container {
-    width: 70%;
-    margin: 150px auto 50px;
+    margin: 0 auto 0px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+#rmc1{
+    width: 70%;
+    margin-top: 150px;
+}
+#rmc2{
+    width: 50%;
+    margin-bottom: 200px;
 }
 
 .recipe_main {
@@ -664,4 +684,425 @@ footer img {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .pc{
+        display: none;
+    }
+    .sp{
+        display: block;
+    }
+    header nav li {
+        margin: 15px;
+    }
+    
+    header nav li a {
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+        padding: 10px 2px;
+    }
+    
+    h1 {
+        font-size: 4rem;
+        font-weight: 300;
+        letter-spacing: 0.3rem;
+    }
+    
+    .header_description {
+        font-size: 1.7rem;
+        letter-spacing: 0.3rem;
+        line-height: 3.6rem;
+    }
+    
+    .header_description p span {
+        padding-right: 0.4rem;
+        border-right: 0.1px solid rgb(75, 72, 70, 0.4);
+    }
+    
+    header .decoration img:nth-child(1) {
+        width: 60%;
+        top: 2%;
+        left: -15%;
+        z-index: 5;
+    }
+    
+    header .decoration img:nth-child(2) {
+        width: 70%;
+        top: 25%;
+        left: 0%;
+        z-index: 4;
+    }
+    
+    header .decoration img:nth-child(3) {
+        width: 50%;
+        top: 40%;
+        left: 50%;
+        z-index: 3;
+    }
+    
+    header .decoration img:nth-child(4) {
+        width: 59%;
+        bottom: 15%;
+        right: -10%;
+    }
+    
+    header .decoration::before {
+        padding: 0;
+    }
+    
+    header .decoration::after {
+        padding: 0;
+    }
+
+    #intro {
+        height: 1000px;
+        margin-top: 50px;
+    }
+    
+    #intro h2 {
+        top: 17%;
+        right: 10%;
+        font-size: 3rem;
+        font-weight: 200;
+        letter-spacing: 0.15rem;
+    }
+    
+    
+    #intro p {
+        top: 27%;
+        right: 30%;
+        font-size: 1.6rem;
+        letter-spacing: 0.15rem;
+        line-height: 3.0rem;
+    }
+    
+    #intro .decoration img:nth-child(1) {
+        width: 20%;
+        top: 0%;
+        left: 2%;
+        z-index: 2;
+    }
+    
+    #intro .decoration img:nth-child(2) {
+        width: 40%;
+        top: 5%;
+        left: 10%;
+        z-index: 1;
+    }
+    
+    #intro .decoration img:nth-child(3) {
+        width: 58%;
+        top: 29%;
+        right: 0;
+        z-index: 2;
+    }
+    
+    #intro .decoration img:nth-child(4) {
+        width: 30%;
+        top: 70%;
+        right: 5%;
+        z-index: 3;
+    }
+    
+    #intro .decoration img:nth-child(5) {
+        width: 30%;
+        top: 75%;
+        right: 15%;
+        z-index: 2;
+    }
+    
+    #intro .decoration img:nth-child(6) {
+        width: 8%;
+        top: 89%;
+        right: 39%;
+        z-index: 3;
+    }
+    
+    #intro .decoration img:nth-child(7) {
+        width: 77%;
+        top: 50%;
+        left: -4%;
+        z-index: 2;
+    }
+    
+    #intro .decoration img:nth-child(8) {
+        width: 18%;
+        top: 73%;
+        left: 24%;
+        z-index: 1;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        white-space: nowrap;
+        letter-spacing: 0.3rem;
+        color: rgb(75, 72, 70, 0.8);
+    }
+    #effect h2{
+        position: relative;
+        top: 3%;
+        left: 70%;
+        transform: translate(-50%,-50%);
+    }
+    
+    .effect_main_container {
+        width: 80%;
+        margin: 80px auto 60px;
+    }
+    
+    .effect_main {
+        margin: 20px;
+    }
+    
+    .effect_main img {
+        width: 150px;
+    }
+    
+    .effect_main p {
+        font-weight: 300;
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+    }
+    
+    #effect .effect_description {
+        text-align: center;
+        color: #4B4846;
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+        line-height: 4.3rem;
+        opacity: 0.8;
+        margin-bottom: 100px;
+    }
+    
+    #effect .button {
+        left: 10%;
+    }
+    
+    #effect .button p {
+        font-size: 4rem;
+        padding: 34px 60px 30px;
+        text-align: center;
+    }
+    
+    #effect .decoration img:nth-child(1) {
+        width: 40%;
+        top: 20%;
+        right: 10%;
+    }
+    
+    #effect .decoration img:nth-child(2) {
+        width: 18%;
+        bottom: 18%;
+        left: 0%;
+    }
+    
+    #effect .decoration img:nth-child(3) {
+        width: 20%;
+        bottom: 10%;
+        left: 5%;
+    }
+    #effect .decoration img:nth-child(4) {
+        width: 6%;
+        bottom: 5%;
+        left: 25%;
+    }
+    #effect .decoration::before {
+        top: 4.5%;
+        right: 2%;
+        padding: 0.5px 15vw;
+    }
+    
+    #recipe h2{
+        left: 10%;
+    }
+    .recipe_wrapper{
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+    }
+
+    #rmc1{
+        width: 50%;
+        margin-top: 0px;
+    }
+    #rmc2{
+        width: 50%;
+        height: 70%;
+        margin-bottom: 0px;
+    }
+    
+    .recipe_main {
+        margin: 40px 10px;
+    }
+    
+    .recipe_main img {
+        width: 180px;
+    }
+    
+    .recipe_main p {
+        padding: 6px 3px 6px 18px;
+        font-size: 2rem;
+        line-height: 1;
+        letter-spacing: 0.3rem;
+    }
+    
+    #recipe .button {
+        margin: 100px 100px 200px;
+    }
+
+    #recipe .decoration img:nth-child(1) {
+        width: 15%;
+        bottom: 20%;
+        right: 10%;
+    }
+    
+    #recipe .decoration img:nth-child(2) {
+        width: 5%;
+        bottom: 10%;
+        right: 30%;
+    }
+    #recipe .decoration::before {
+        top: 4%;
+        left: 2%;
+        padding: 0.5px 12vw;
+    }
+    #choose {
+        padding-bottom: 50px;
+    }
+    #choose h2{
+        left: 80%;
+    }
+    #choose .choose_subtitle{
+        top: 2.5%;
+        right: -20%;
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+    .choose_main_container {
+        width: 60%;
+        margin: 50px auto;
+    }
+    
+    .choose_main {
+        position: relative;
+    }
+    #choose_main1 {
+        margin-top: 100px;
+    }
+    #choose_main2 {
+        margin-top: 50px;
+    }
+    #choose_main3 {
+        margin-top: 50px;
+    }
+    #choose_main4 {
+        margin-top: 50px;
+    }
+    .choose_main img {
+        width: 200px;
+    }
+    
+    .choose_main p {
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    
+    .choose_main p:nth-child(2){
+        top: 17%;
+        left: 10%;
+        font-size: 0.5rem;
+        color: #FFBC00;
+        opacity:80%;
+    }
+    .choose_main p:nth-child(3){
+        top: 24%;
+        left: 14%;
+        font-size: 2.3rem;
+        color: #FFBC00;
+        opacity:80%;
+    }
+    .choose_main p:nth-child(4){
+        top: 50%;
+        left: 52%;
+        opacity: 0.8;
+        font-family: fot-tsukuardgothic-std, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.5rem;
+        white-space: nowrap;
+        letter-spacing: 0.3rem;
+        color: rgb(75, 72, 70, 0.8);
+    }
+    .choose_main p:nth-child(5){
+        top: 80%;
+        left: 53%;
+        opacity: 0.7;
+        white-space: nowrap;
+        text-align: left;
+        color: #4B4846;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.8rem;
+    }
+    .choose_main p span{
+        border-bottom: 2px solid #fff;;
+    }
+    #choose .button{
+        margin: 40px 0;
+    }
+    #choose .decoration img:nth-child(1) {
+        opacity: 0.3;
+        width: 30%;
+        top: -30%;
+        left: 5%;
+    }
+    
+    #choose .decoration img:nth-child(2) {
+        width: 15%;
+        bottom: 20%;
+        left: 5%;
+    }
+    
+    #choose .decoration img:nth-child(3) {
+        width: 5%;
+        bottom:12%;
+        left: 20%;
+    }
+    
+    #choose .decoration::before {
+        content: "";
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        padding: 0.5px 15vw;
+    }
+    #buy {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    #buy .button p{
+        font-size: 4rem;
+        padding: 34px 60px 30px;
+    }
+    footer {
+        position: relative;
+    }
+    
+    footer p {
+        font-size: 1.5rem;
+        color: #F8F8EF;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        padding-bottom: 30px;
+    }
+    
+    footer img {
+        width: 50%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
 }
