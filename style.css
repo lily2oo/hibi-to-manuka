@@ -184,18 +184,15 @@ header .decoration::after {
 }
 
 .button {
+    position: relative;
     display: inline-block;
     border: 2px solid #fff;
     border-radius: 50px;
+    overflow: hidden;
 }
 
 .button a {
     text-decoration: none;
-}
-
-.button:hover {
-    background-color: #fff;
-    transition: 2s;
 }
 
 .button p {
@@ -205,6 +202,25 @@ header .decoration::after {
     font-family: 'Vision Light Italic';
     padding: 17px 30px 15px;
     text-align: center;
+}
+.button .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.button .bg p{
+    position: relative;
+    font-size: 2rem;
+    line-height: 0;
+    color: #EED992;
+    background-color: #fff;
+    font-family: 'Vision Light Italic';
+    padding: 17px 30px 15px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 #intro {
