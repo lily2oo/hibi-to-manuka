@@ -26,6 +26,19 @@ if (splash_text != myYear + myMonth + myDate) {//cookieデータとアクセス�
     $("#loading").css("display", "none");//同日2回目のアクセスでローディング画面非表示
 }
 
+$(function () {
+    $(window).scroll(function () {
+      $('.fade').each(function () {
+        const targetElement = $(this).offset().top;
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        if (scroll > targetElement - windowHeight) {
+          $(this).addClass('view');
+        }
+      });
+    });
+  });
+
 $(function(){
     let duration = 300;
     $('.button')
@@ -69,10 +82,6 @@ $(window).scroll(function () {
 	ScrollAnime();//スクロール途中でヘッダーが消え、上にスクロールすると復活する関数を呼ぶ
 });
 
-// ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
-	ScrollAnime();//スクロール途中でヘッダーが消え、上にスクロールすると復活する関数を呼ぶ
-});
 
 
 $(".openbtn").click(function () {//ボタンがクリックされたら
