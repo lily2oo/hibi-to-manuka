@@ -20,6 +20,7 @@ html {
     font-weight: lighter;
     background-color: #EED992;
 }
+
 .fade {
     opacity: 0;
     transition: opacity 3s;

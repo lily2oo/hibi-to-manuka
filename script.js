@@ -24,7 +24,7 @@ if (splash_text != myYear + myMonth + myDate) {//cookieデータとアクセス�
 }, 1000);//1000ミリ秒（1秒）後に処理を実行
 }else {
     $("#loading").css("display", "none");//同日2回目のアクセスでローディング画面非表示
-}
+};
 
 $(function () {
     $(window).scroll(function () {
